@@ -12,7 +12,7 @@
 You run one playbook and set up a node.
 
 ```bash
-ansible-playbook main.yml -e "target=juno_main"
+ansible-playbook -i inventory  main.yml -e "target=juno_main"
 ansible-playbook -i inventory_testnet.ini main.yml -e "target=juno_test"
 ```
 
@@ -66,6 +66,7 @@ When you are ready install a node, you run:
 
 ```bash
 ansible-playbook main.yml -e "target=HOST_NAME"
+ansible-playbook -i inventory  main.yml -e "target=juno_main"
 ```
 
 ## Playbooks
